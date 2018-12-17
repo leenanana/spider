@@ -32,10 +32,24 @@ public class App {
 				film f=new film();
 				
 				Element t =e.select(".title").first();
+//				影片别名
+			    Element info=e.select(".other").first();
+//			    影片评分
+			    Element rating=e.select(".rating_num").first();
 				String num=e.select(".star span").last().text();
-				System.out.println(t.text()+","+num);
+//				影片海报
+				String pic=e.select(".pic").text();
+//				影片语录
+				String quote=e.select(".quote span").first().text();
+//				影片导演信息
+				String bd=e.select(".bd p").first().text();
 				System.out.println(t.text());
-
+				System.out.println(t.text()+","+num);
+                System.out.println("别名  "+info.text());
+                System.out.println("评分"+rating.text());
+                System.out.println(t.text()+","+pic);
+                System.out.println(t.text()+","+"语录"+quote);
+                System.out.println(t.text()+","+bd);
 //				f.id
 //				f.title
 				list.add(f);
